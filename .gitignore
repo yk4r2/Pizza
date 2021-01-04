@@ -1,1 +1,5 @@
+.git/*
+.idea/*
+.pytest_cache/*
 venv/*
+
