@@ -8,7 +8,7 @@ With delivery: `python cli.py order Margherita --delivery`\
 Without one: `python cli.py order Hawaiian`\
 You can even choose size: `python cli.py order Pepperoni --size=M`
 # Tests coverage
-...
+```
 │============= test session starts =============│
 │platform linux -- Python 3.8.6, pytest-6.2.1, p│
 │platform linux -- Python 3.8.6, pytest-6.2.1, p│
@@ -21,6 +21,6 @@ You can even choose size: `python cli.py order Pepperoni --size=M`
 │tests/test_pizza.py ......              [100%] │
 │                                               │
 │============= 12 passed in 0.07s ==============│
-...
+```
 
 All I made with my *** idea to use regular expressions is 50% coverage. I'd better use mock.patch, but "it is too easy".
