@@ -27,20 +27,19 @@ class PizzaBase:
     def size(self) -> str:
         return self._size
 
-    @property
     def ingredients(self) -> defaultdict:
         return self._ingredients
 
     @size.setter
-    def size(self, value: str = "L") -> None:
+    def size(self, value: str) -> None:
         """This weird setter checkup is how it is made in EAFP, lol."""
         try:
             self._size = Size[value].name
         except KeyError:
-            print("Size is not suitable.")
+            raise KeyError("Size is not suitable.")
 
     def __hash__(self) -> int:
-        return hash(self.ingredients)
+        return hash((self.ingredients, self._size))
 
     def __eq__(self, other) -> bool:
         """Better type of checkup."""
