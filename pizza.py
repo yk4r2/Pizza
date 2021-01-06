@@ -4,6 +4,7 @@ from enum import Enum
 
 class Size(Enum):
     """This is done for sizes checkup using the EAFP-paradigm."""
+    M = 0
     L = 1
     XL = 2
 
