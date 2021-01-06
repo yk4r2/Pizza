@@ -2,7 +2,7 @@ import click
 from enum import Enum
 from random import randint
 from collections import defaultdict
-from main.decorators import log
+from auxiliary.decorators import log
 from main.pizza import PizzaBase, Margherita, Hawaiian, Pepperoni, Size
 
 MENU = defaultdict(PizzaBase)
@@ -66,7 +66,7 @@ def order(pizza: str, size: str, is_delivered: bool):
 
 @cli.command()
 def menu():
-    """Выводит меню"""
+    """Returns menu"""
     for pizza in MENU.values():
         adj_variant = AdjectiveVars(randint(0, 3)).name.replace("_", " ")
         compl_variant = ComplementVars(randint(0, 3)).name.replace("_", " ")
