@@ -28,6 +28,7 @@ class PizzaBase:
         return self._size
 
     def ingredients(self) -> defaultdict:
+        """This is my dict() method."""
         return self._ingredients
 
     @size.setter
