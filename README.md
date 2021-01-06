@@ -6,7 +6,7 @@ Main command interface is a command line one, made using `click`.\
 Pizza choices:
 - Pepperoni,
 - Hawaiian,
-- Margherita.\
+- Margherita.
 
 Size choices:
 - M,
