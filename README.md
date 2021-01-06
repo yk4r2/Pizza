@@ -26,7 +26,6 @@ You can even choose size: `python cli.py order Pepperoni --size=M`
 ```
 │============= test session starts =============│
 │platform linux -- Python 3.8.6, pytest-6.2.1, p│
-│platform linux -- Python 3.8.6, pytest-6.2.1, p│
 │y-1.10.0, pluggy-0.13.1                        │
 │rootdir: /home/yk4r2/Documents/Pizza           │
 │plugins: cov-2.10.1                            │
