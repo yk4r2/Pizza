@@ -1,13 +1,15 @@
 # Pizza project
+Welcome to the BEST pizza-ordering interface EVER!\
 You can either have a look at a menu or order some pizza.\
+Main command interface is a command line one, made using `click`.\
 Pizza choices:
 - Pepperoni,
 - Hawaiian,
-- Margherita.
+- Margherita.\
 Size choices:
 - M,
 - L,
-- XL.
+- XL.\
 ## Menu entering
 `python cli.py menu`
 ## Pizza baking
