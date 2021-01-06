@@ -1,6 +1,7 @@
-.git/*
-.idea/*
-.pytest_cache/*
-venv/*
+.git
+.idea
+.pytest_cache
+venv
 __*
-
+tests/.pytest_cache
+main/.pytest_cache

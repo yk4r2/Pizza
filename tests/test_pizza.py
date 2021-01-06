@@ -1,6 +1,6 @@
 import pytest
 from collections import defaultdict
-from pizza import PizzaBase, Margherita, Pepperoni, Hawaiian
+from main.pizza import Margherita, Hawaiian, Pepperoni
 
 
 @pytest.mark.parametrize(
