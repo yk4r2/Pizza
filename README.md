@@ -23,4 +23,4 @@ You can even choose size: `python cli.py order Pepperoni --size=M`
 │============= 12 passed in 0.07s ==============│
 ```
 
-All I made with my *** idea to use regular expressions is 50% coverage. I'd better use mock.patch, but "it is too easy".
+This is all I achieved with my *** idea to use regular expressions is 50% coverage. I'd better use mock.patch, but "it is too easy".
