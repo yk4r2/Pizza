@@ -1,5 +1,13 @@
 # Pizza project
-You can either enter menu or bake pizza.
+You can either have a look at a menu or order some pizza.\
+Pizza choices:
+- Pepperoni,
+- Hawaiian,
+- Margherita.
+Size choices:
+- M,
+- L,
+- XL.
 ## Menu entering
 `python cli.py menu`
 ## Pizza baking
