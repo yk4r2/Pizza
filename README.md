@@ -40,3 +40,7 @@ Test set is linux, Python 3.8.6, pytest 6.2.1, cov 2.10.1
 ```
 
 This is all I achieved with my *** idea to use regular expressions is 50% coverage. I'd better use mock.patch, but "it is too easy".
+
+# PEP8
+This file was reformatted by `black` and additionally checked up using `flake8` with maximum string length of 101.
+

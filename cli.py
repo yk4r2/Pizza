@@ -1,3 +1,5 @@
+import sys
+
 import click
 from enum import Enum
 from random import randint
@@ -40,17 +42,29 @@ def cli():
     pass
 
 
+def menu_stringify(string: defaultdict) -> str:
+    return ", ".join(string)
+
+
 @cli.command()
-@click.option('--delivery', "is_delivered", default=False, is_flag=True, help="If chosen, your order will be delivered.")
-@click.option('--size', default='L', help='You can choose your pizza size.')
-@click.argument('pizza', nargs=1)
+@click.option(
+    "--delivery",
+    "is_delivered",
+    default=False,
+    is_flag=True,
+    help="If chosen, your order will be delivered.",
+)
+@click.option("--size", default="L", help="You can choose your pizza size.")
+@click.argument("pizza", nargs=1)
 def order(pizza: str, size: str, is_delivered: bool):
     """Bakes and deliveres pizza."""
     if pizza not in MENU:
-        print("No such pizza but your opinion is very important for us (no).\n"
-              "Choose between the possible options: " +
-              str(", ".join(MENU)) + '.',
-              )
+        pizza_str = ("No such pizza but your opinion is very"
+                     "important for us (no).\n"
+                     "Choose between the possible options: ",
+                     )
+        pizza_str += menu_stringify(MENU)
+        print(pizza_str)
         return None
     try:
         Size[size].name
@@ -64,14 +78,27 @@ def order(pizza: str, size: str, is_delivered: bool):
         print("Now you can eat your pizza.")
 
 
+def random_word_chooser(word_class, var_count: int) -> str:
+    return word_class(randint(0, var_count)).name.replace("_", " ")
+
+
+def ingredients_stringify(pizza) -> str:
+    return str(", ".join(list(pizza.ingredients().keys())[1:]))
+
+
 @cli.command()
 def menu():
     """Returns menu"""
     for pizza in MENU.values():
-        adj_variant = AdjectiveVars(randint(0, 3)).name.replace("_", " ")
-        compl_variant = ComplementVars(randint(0, 3)).name.replace("_", " ")
-        print(f"- the {adj_variant} {pizza} in {compl_variant}: {', '.join(list(pizza.ingredients().keys())[1:])}.")
+        adj_variant = random_word_chooser(AdjectiveVars, 3)
+        compl_variant = random_word_chooser(ComplementVars, 3)
+        # taking all the keys except of the default one.
+        ingredients = ingredients_stringify(pizza)
+        print(f"- the {adj_variant} {pizza} in {compl_variant}: "
+              f"{ingredients}."
+              )
 
 
-if __name__ == '__main__':
-    cli()
+if __name__ == "__main__":
+    status = cli()
+    sys.exit(status)

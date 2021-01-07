@@ -9,7 +9,7 @@ from main.pizza import Margherita, Hawaiian, Pepperoni
         (Margherita, "Margherita"),
         (Pepperoni, "Pepperoni"),
         (Hawaiian, "Hawaiian"),
-    ]
+    ],
 )
 def test_pizza_default(pizza_class, name: str):
     assert str(pizza_class()) == name

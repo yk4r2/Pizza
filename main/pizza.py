@@ -4,6 +4,7 @@ from enum import Enum
 
 class Size(Enum):
     """This is done for sizes checkup using the EAFP-paradigm."""
+
     M = 0
     L = 1
     XL = 2
@@ -57,6 +58,7 @@ class Margherita(PizzaBase):
 
     A margherita pizza class.
     """
+
     def __init__(self, *args, **kwargs) -> None:
         super(Margherita, self).__init__(*args, **kwargs)
         self._ingredients["tomatoes"] = 250
@@ -64,6 +66,7 @@ class Margherita(PizzaBase):
 
 class Pepperoni(PizzaBase):
     """Wow! A Pepperoni pizza class!"""
+
     def __init__(self, *args, **kwargs) -> None:
         super(Pepperoni, self).__init__(*args, **kwargs)
         self._ingredients["pepperoni"] = 250
@@ -71,6 +74,7 @@ class Pepperoni(PizzaBase):
 
 class Hawaiian(PizzaBase):
     """No docstring here (actually there is one)."""
+
     def __init__(self, *args, **kwargs) -> None:
         super(Hawaiian, self).__init__(*args, **kwargs)
         self._ingredients["pineapples"] = 300
