@@ -61,7 +61,7 @@ def order(pizza: str, size: str, is_delivered: bool):
     if pizza not in MENU:
         pizza_str = ("No such pizza but your opinion is very"
                      "important for us (no).\n"
-                     "Choose between the possible options: ",
+                     "Choose between the possible options: "
                      )
         pizza_str += menu_stringify(MENU)
         print(pizza_str)
@@ -83,7 +83,7 @@ def random_word_chooser(word_class, var_count: int) -> str:
 
 
 def ingredients_stringify(pizza) -> str:
-    return str(", ".join(list(pizza.ingredients().keys())[1:]))
+    return ", ".join(list(pizza.ingredients().keys())[1:])
 
 
 @cli.command()
